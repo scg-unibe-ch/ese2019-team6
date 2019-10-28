@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 40%">
+    <ion-item>
+      <ion-input placeholder="Email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Password" type="password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" routerLink="/home">Login</ion-button>
+    <ion-item routerLink="/requestlogin" style="text-align: center; margin-top: 10px; --min-height: 0.5rem">
+      <ion-label style="font-size: 12px">Trouble logging in?</ion-label>
+    </ion-item>
+  </div>
+  <div style="margin-top: 40%" text-center>
+    <ion-row>
+      <ion-label style="width: 100%; text-align: center; font-size: 11px">Not registered yet?</ion-label>
+    </ion-row>
+    <ion-button style="font-size: 12px; height: 22px; width:125px; margin-left: auto; margin-right: auto" routerLink="/signup" expand="full">Sign up</ion-button>
+  </div>
+</ion-content>

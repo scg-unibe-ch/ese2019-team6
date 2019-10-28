@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoItemComponent } from './todo-list/todo-item/todo-item.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TodoItemComponent } from './todo-list/todo-item/todo-item.component';
     BrowserModule,
     IonicModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     StatusBar,
