@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {TodoList} from './todo-list';
 import {HttpClient} from '@angular/common/http';
+import {MenuController} from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -15,12 +16,27 @@ import {HttpClient} from '@angular/common/http';
 export class AppComponent implements OnInit {
   todoList: TodoList = new TodoList(null, '');
   todoLists: TodoList[] = [];
+  pages: any = [
+    {
+      name: 'Home',
+      url: 'home'
+    },
+    {
+      name: 'Login',
+      url: 'login'
+    },
+    {
+      name: 'Sign Up',
+      url: 'signup'
+    }
+  ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private menuControl: MenuController
   ) {
     this.initializeApp();
   }
@@ -36,6 +52,10 @@ export class AppComponent implements OnInit {
     this.httpClient.get('http://localhost:3000/todolist').subscribe((instances: any) => {
       this.todoLists = instances.map((instance) => new TodoList(instance.id, instance.name));
     });
+  }
+
+  closeMenu() {
+    this.menuControl.close().then();
   }
 
   onTodoListCreate() {
