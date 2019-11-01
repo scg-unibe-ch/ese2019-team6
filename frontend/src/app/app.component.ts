@@ -18,6 +18,10 @@ export class AppComponent implements OnInit {
   todoLists: TodoList[] = [];
   pages: any = [
     {
+      name: 'Search',
+      url: 'search'
+    },
+    {
       name: 'Home',
       url: 'home'
     },
