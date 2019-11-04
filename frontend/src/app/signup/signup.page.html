@@ -1,46 +1,59 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="width: 100%; position: absolute; text-align: center">Sign Up</ion-title>
-    <ion-menu-button slot="end"></ion-menu-button>
+    <ion-title text-center>Sign Up</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div style="margin-top: 25%">
-    <ion-row>
-      <ion-col size="6">
-        <ion-item>
-          <ion-input placeholder="First name"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="6">
-        <ion-item>
-          <ion-input placeholder="Last name"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </div>
-  <div style="margin-top: 3%">
-    <ion-item>
-      <ion-input placeholder="Email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input placeholder="Password" type="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input placeholder="Confirm password" type="password"></ion-input>
-    </ion-item>
-  </div>
-  <div style="margin-top: 15%">
-    <ion-button expand="block">Sign Up</ion-button>
-  </div>
-  <div style="margin-top: 15%" text-center>
-    <ion-row>
-      <ion-label style="width: 100%; text-align: center; font-size: 11px">Already signed up?</ion-label>
-    </ion-row>
-    <ion-button style="font-size: 12px; height: 22px; width:125px; margin-left: auto; margin-right: auto" routerLink="/login" expand="full">Login</ion-button>
+<ion-content no-padding>
+  <div class="main">
+    <ion-card no-margin>
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="text" placeholder="Username" [(ngModel)]="username" class="input"
+                       padding-horizontal clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="email" class="input" padding-horizontal
+                       clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="password" placeholder="Password" [(ngModel)]="password" class="input"
+                       padding-horizontal clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="number" placeholder="Enter a number from 1 to 1000" [(ngModel)]="image"
+                       class="input" padding-horizontal clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" (click)="signup()" color="undefined" class="transition">
+              <strong class="white">
+                Register</strong></ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text class="error" text-center>{{error}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <div style="margin-top: 40%" text-center>
+          <ion-row>
+            <ion-label style="width: 100%; text-align: center; font-size: 11px">Already have and account?</ion-label>
+          </ion-row>
+          <ion-button style="font-size: 12px; height: 22px; width:125px; margin-left: auto; margin-right: auto" routerLink="/login" expand="full" color="undefined" class="imp-button">Log In</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
