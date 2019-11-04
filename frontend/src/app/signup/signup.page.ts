@@ -23,18 +23,6 @@ export class SignupPage implements OnInit {
     public loadingController: LoadingController,
     public alertController: AlertController) {
   }
-
-  async openLoader() {
-    const loading = await this.loadingController.create({
-      message: 'Please Wait ...',
-      duration: 500
-    });
-    await loading.present();
-  }
-  async closeLoading() {
-    return await this.loadingController.dismiss();
-  }
-
   signup() {
     this.fireauth.auth.createUserWithEmailAndPassword(this.email, this.password)
       .then(res => {
