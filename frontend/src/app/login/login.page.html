@@ -19,24 +19,27 @@
       </ion-text>
     </div>
   </ion-row>
-  <div style="margin-top: 40%;">
-    <ion-item>
-      <ion-input placeholder="Email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input placeholder="Password" type="password"></ion-input>
-    </ion-item>
+    <ion-col>
+      <ion-row>
+      <ion-input placeholder="Email" class="input"></ion-input>
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-row>
+      <ion-input placeholder="Password" type="password" class="input"></ion-input>
+      </ion-row>
+    </ion-col>
+
     <ion-button expand="block" routerLink="/home" color="undefined" class="transition">Login</ion-button>
-    <ion-item routerLink="/requestlogin" style="text-align: center; margin-top: 10px; --min-height: 0.5rem">
-      <ion-label style="font-size: 12px">Trouble logging in?</ion-label>
-    </ion-item>
-  </div>
-  <div style="margin-top: 40%" text-center>
+        <!-- /** to be changed <ion-item routerLink="/requestlogin" style="text-align: center; margin-top: 10px; --min-height: 0.5rem"></ion-item> */  -->
+      <ion-row>
+      <ion-label style="width: 100%; text-align: center; font-size: 11px">Trouble to log in?</ion-label>
+      </ion-row>
+      <ion-button style="font-size: 12px; height: 22px; width:125px; margin-left: auto; margin-right: auto" routerLink="/retrieve" expand="full" color="undefined" class="imp-button">Reset Password</ion-button>
     <ion-row>
       <ion-label style="width: 100%; text-align: center; font-size: 11px">Not registered yet?</ion-label>
     </ion-row>
     <ion-button style="font-size: 12px; height: 22px; width:125px; margin-left: auto; margin-right: auto" routerLink="/signup" expand="full" color="undefined" class="imp-button">Sign up</ion-button>
-  </div>
     </ion-card-content>
     </ion-card>
   </div>
