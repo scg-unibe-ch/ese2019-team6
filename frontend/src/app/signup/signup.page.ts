@@ -14,7 +14,8 @@ export class SignupPage implements OnInit {
   password = '';
   error = '';
   username = '';
-  image: number;
+  image = Math.floor(Math.random() * 100) + 1;
+
   constructor(
     private fireauth: AngularFireAuth,
     private router: Router,
@@ -46,7 +47,7 @@ export class SignupPage implements OnInit {
           photoURL: `https://picsum.photos/id/${this.image}/200/200`
         })
           .then(() => {
-            this.router.navigateByUrl('/home');
+            this.router.navigateByUrl('/search');
           });
       }
     });
