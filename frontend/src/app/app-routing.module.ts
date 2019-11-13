@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'signup', loadChildren: './signup/signup.module#SignUpPageModule' },
   { path: 'search', loadChildren: './search/search.module#SearchPageModule' },  { path: 'newpass', loadChildren: './newpass/newpass.module#NewpassPageModule' },
+  { path: 'editprof', loadChildren: './editprof/editprof.module#EditprofPageModule' },
 
 
 ];
