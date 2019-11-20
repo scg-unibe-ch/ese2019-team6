@@ -6,8 +6,8 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-list *ngFor="let page of pages">
-        <ion-item (click)="closeMenu()" routerLink={{page.url}}>
+      <ion-list>
+        <ion-item *ngFor="let page of pages" (click)="closeMenu()" routerLink={{page.url}}>
           {{page.name}}
         </ion-item>
       </ion-list>
