@@ -1,0 +1,14 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <h6>
+        {{service.name}}
+      </h6>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <div *ngFor="let content of service.content">
+      {{content}}
+    </div>
+  </ion-card-content>
+</ion-card>

@@ -1,16 +1,15 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Search</ion-title>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+    <ion-menu-button slot="end" style="--color: rgb(21,21,21);"></ion-menu-button>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchEntry" (ngModelChange)="filterList(searchEntry)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div style="margin-top: 40%;">
-    <ion-item>
-      <ion-input placeholder="What are you looking for?"></ion-input>
-    </ion-item>
-  </div>
+  <ion-item *ngFor="let service of filteredList">
+    <app-service [service]="service" style="width: 100%" (click)="goToServicePage(service['id'])"></app-service>
+  </ion-item>
 </ion-content>
