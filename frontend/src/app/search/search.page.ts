@@ -24,11 +24,8 @@ export class SearchPage implements OnInit {
     this.subscription = this.serviceDB.getServices().subscribe(services => {
       this.serviceList = services;
       this.filteredList = this.serviceList;
+      this.subscription.unsubscribe();
     });
-  }
-
-  ionViewWillLeave() {
-    this.subscription.unsubscribe();
   }
 
   filterList(filter: string) {
@@ -39,4 +36,12 @@ export class SearchPage implements OnInit {
     this.navCtrl.navigateForward('services/' + id);
   }
 
+  refresh(event) {
+    this.subscription = this.serviceDB.getServices().subscribe(services => {
+      this.serviceList = services;
+      this.filteredList = this.serviceList;
+      this.subscription.unsubscribe();
+      event.target.complete();
+    });
+  }
 }

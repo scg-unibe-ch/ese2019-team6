@@ -1,0 +1,15 @@
+ion-content {
+  user-select: none;
+}
+
+ion-searchbar {
+  user-select: none;
+}
+
+ion-refresher ion-refresher-content {
+  background: #ffffff;
+}
+
+app-service:hover {
+  cursor: pointer;
+}

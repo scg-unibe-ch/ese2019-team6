@@ -26,10 +26,7 @@ export class ServicesPage implements OnInit {
   ngOnInit() {
     this.subscription = this.serviceDB.getService(this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.service = data;
+      this.subscription.unsubscribe();
     });
-  }
-
-  ionViewWillLeave() {
-    this.subscription.unsubscribe();
   }
 }

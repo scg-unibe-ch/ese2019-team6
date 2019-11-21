@@ -1,15 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Search</ion-title>
+    <ion-title style="width: 100%; position: absolute; text-align: center">Search</ion-title>
     <ion-menu-button slot="end" style="--color: rgb(21,21,21);"></ion-menu-button>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar [(ngModel)]="searchEntry" (ngModelChange)="filterList(searchEntry)"></ion-searchbar>
+    <ion-searchbar [(ngModel)]="searchEntry" (ngModelChange)="filterList(searchEntry)" mode="ios"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-refresher slot="fixed" pull-min="60" pull-max="60" pull-factor="0.3" (ionRefresh)="refresh($event)">
+    <ion-refresher-content refreshingSpinner="circular"></ion-refresher-content>
+  </ion-refresher>
   <ion-item *ngFor="let service of filteredList">
     <app-service [service]="service" style="width: 100%" (click)="goToServicePage(service['id'])"></app-service>
   </ion-item>
+  <div *ngIf="!serviceList">
+    <ion-item *ngFor="let i of [0,1,2,3]">
+      <ion-card style="width: 100%">
+        <ion-card-header>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-skeleton-text animated style="width: 95%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 85%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </div>
 </ion-content>
