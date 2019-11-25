@@ -28,6 +28,10 @@ export class AppComponent implements OnInit {
     {
       name: 'Login',
       url: 'login'
+    },
+    {
+      name: 'Edit Profile',
+      url: 'editprof'
     }
   ];
 
