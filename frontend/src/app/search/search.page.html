@@ -1,33 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
-    <ion-menu-button class="end1" slot="end"></ion-menu-button>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+    <ion-title style="width: 100%; position: absolute; text-align: center">Search</ion-title>
+    <ion-menu-button slot="end" style="--color: rgb(21,21,21);"></ion-menu-button>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [(ngModel)]="searchEntry" (ngModelChange)="filterList(searchEntry)" mode="ios"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div style="margin-top: 40%;">
-    <ion-item>
-      <ion-input placeholder="What are you looking for?"></ion-input>
+  <ion-refresher slot="fixed" pull-min="60" pull-max="60" pull-factor="0.3" (ionRefresh)="refresh($event)">
+    <ion-refresher-content refreshingSpinner="circular"></ion-refresher-content>
+  </ion-refresher>
+  <ion-item *ngFor="let service of filteredList">
+    <app-service [service]="service" style="width: 100%" (click)="goToServicePage(service['id'])"></app-service>
+  </ion-item>
+  <div *ngIf="!serviceList">
+    <ion-item *ngFor="let i of [0,1,2,3]">
+      <ion-card style="width: 100%">
+        <ion-card-header>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-skeleton-text animated style="width: 95%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 85%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </ion-card-content>
+      </ion-card>
     </ion-item>
-  </div>
-
-  <br><br><br><br><br><br><br><br>
-<div>
-  <p class="lastpart"><img src="../../assets/eventify6.png" class="img2">
-    <br>
-    <i class="a1">Eventify is a fully customizable platform for creating digital event apps.
-      Create personalized, cross-platform mobile apps for every type of event. </i>
-    <ion-card text-center padding color="Danger" >
-      <ion-icon name="logo-facebook" size="large"></ion-icon>
-      <ion-icon name="logo-twitter" size="large"></ion-icon>
-      <ion-icon name="logo-linkedin" size="large"></ion-icon>
-    </ion-card>
-    <br>
-  <p style="color:black;font-family:'MS UI Gothic'">&copy; EVENTIFY, 2019</p>
-
   </div>
 </ion-content>
