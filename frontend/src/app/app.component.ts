@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
     {
       name: 'Edit Profile',
       url: 'editprof'
+    },
+    {
+      name: 'Contact',
+      url: 'contact'
     }
   ];
 
