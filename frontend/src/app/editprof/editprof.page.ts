@@ -1,20 +1,107 @@
-import { Component, OnInit } from '@angular/core';
-import { Platform, AlertController } from '@ionic/angular';
-import { LoadingController, ToastController } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+import { LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editprof',
-  templateUrl: './editprof.page.html',
-  styleUrls: ['./editprof.page.scss'],
+  templateUrl: 'editprof.page.html',
+  styleUrls: ['editprof.page.scss'],
 })
-export class EditprofPage implements OnInit {
+export class EditprofPage {
+  user: any;
+  email: string = '';
+  password: string = '';
+  username: string = '';
+  image: number;
+  phone: number;
+  error: string;
+  userWantsToSignup: boolean = false;
+  linkError: string = '';
+  constructor(private toastController: ToastController, public loadingController: LoadingController, private fireauth: AngularFireAuth, private router: Router) { }
 
-  constructor() { }
 
-
-  ngOnInit() {
+  ionViewDidEnter() {
+    this.fireauth.auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.user = user;
+        console.log(this.user);
+      }
+    })
   }
 
+  updateEmail() {
+    this.user.updateEmail(this.email)
+      .then(() => {
+        this.email = '';
+        this.presentToast('Email updated', false, 'bottom', 1000);
+        this.error = '';
+      })
+      .catch(err => {
+        console.log(` failed ${err}`);
+        this.error = err.message;
+      });
+  }
+
+  updateUsername() {
+    this.user.updateProfile({
+      displayName: this.username
+    })
+      .then((data) => {
+        console.log(data);
+        this.username = '';
+        this.presentToast('Username updated', false, 'bottom', 1000);
+        this.error = '';
+      })
+      .catch(err => {
+        console.log(` failed ${err}`);
+        this.error = err.message;
+      });
+  }
+
+  updateImage() {
+
+    this.user.updateProfile({
+      photoURL: `https://picsum.photos/id/${this.image}/200/200`
+    })
+      .then((data) => {
+        console.log(data);
+        this.image = null;
+        this.presentToast('Image updated', false, 'bottom', 1000);
+        this.error = '';
+      })
+      .catch(err => {
+        console.log(` failed ${err}`);
+        this.error = err.message;
+      });
+  }
+
+  updatePassword() {
+    this.user.updatePassword(this.password)
+      .then(() => {
+        this.password = '';
+        this.presentToast('Password updated', false, 'bottom', 1000);
+        this.error = '';
+      })
+      .catch(err => {
+        console.log(` failed ${err}`);
+        this.error = err.message;
+      });
+  }
+
+  logout() {
+    this.fireauth.auth.signOut().then(() => {
+      this.router.navigate(['/login']);
+    })
+  }
+
+  async presentToast(message, show_button, position, duration) {
+    const toast = await this.toastController.create({
+      message: message,
+      showCloseButton: show_button,
+      position: position,
+      duration: duration
+    });
+    toast.present();
+  }
 }
