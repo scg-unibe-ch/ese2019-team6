@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       url: 'home'
     },
     {
-      name: 'Search',
+      name: 'Services',
       url: 'search'
     },
     {

@@ -9,22 +9,25 @@ import {ToastController} from '@ionic/angular';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
+  ngOnInit() {
+  }
 
   email = '';
   name = '';
   error = '';
+
   constructor(
     private fireauth: AngularFireAuth,
     private router: Router,
     private toastController: ToastController,
   ) {
-}
+  }
 
   recover() {
     this.fireauth.auth.sendPasswordResetEmail(this.email)
       .then(data => {
         console.log(data);
-        this.presentToast('Password reset email sent', true, 'bottom', 3000);
+        //this.presentToast('Password reset email sent', true, 'bottom', 3000);
         this.router.navigateByUrl('/login');
       })
       .catch(err => {
@@ -32,3 +35,4 @@ export class ContactPage implements OnInit {
         this.error = err.message;
       });
   }
+}

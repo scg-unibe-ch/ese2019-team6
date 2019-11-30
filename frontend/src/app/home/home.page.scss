@@ -12,17 +12,26 @@
   float: right;
 }
 
+
+.alttext{
+
+  color: gray;
+  text-align: center;
+  font-size: 16px;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
 .end1{
-  background: dodgerblue !important;
+  background: limegreen !important;
+  filter: brightness(95%);
   color:white;
   border: 0.8px solid rgb(1000, 1000, 1000);
   border-radius: 10px;
   display: block;
 }
 
-.button1 {
-  float: left;
-  }
 
 .s1{
   background-color: gray(to right, #ffcc66 14%, #ff9933 96%);
@@ -78,17 +87,20 @@
   display: block;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 170px;
+  margin-top: 50px;
   color: #633ce0;
   font-size: 5px;
-  float: left;
+  justify-content: center;
 }
 
 .img-logo{
-  margin-left: 10%;
-  margin-right: 10%;
+
+  justify-content: center;
   display: block;
-  width:100%;
+  width:300px;
+  height: 200px;
+
+  text-align: center;
 }
 
 .a1{
@@ -114,14 +126,23 @@
 }
 
 .lastpart{
-  background-color: midnightblue;
+  background-color: limegreen;
+  filter: brightness(95%);
   color: white;
   font-size: 10px;
   text-indent: 15px;
   text-decoration: solid;
   text-align: justify;
   text-transform: uppercase;
+
 }
+
+.img2{
+  height: 50px;
+  padding-top: 10px;
+}
+
+
 .div-logo1{
   text-align: center;
   margin-left: 30%;
@@ -133,19 +154,18 @@
   margin-left: 20%;
   margin-right: 20%;
 }
-.img3{
-  text-align: center;
-}
+
 
 .p1{
   margin-left: 10%;
   margin-right: 10%;
 }
 .d1{
-  color: darkblue;
+  color: gray;
   margin-left: 10%;
   margin-right: 10%;
-  font-size: 15px;
+  font-size: 11px;
+  text-align: center;
 }
 .img4{
   text-align: center;
@@ -162,5 +182,10 @@
   padding: 10px;
   float: right;
   margin-left: 10%;
+}
 
+.brand{
+  color: gray;
+  font-size: 0.3em !important;
+  padding: 0.5px;
 }
