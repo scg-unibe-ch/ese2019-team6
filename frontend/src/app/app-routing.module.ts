@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'services', redirectTo: 'search', pathMatch: 'full' },
   { path: 'services/:id', loadChildren: './services/services.module#ServicesPageModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
-  { path: '', loadChildren: 'https://www.instagram.com/eventifyuk/?hl=en' },
 
 ];
 

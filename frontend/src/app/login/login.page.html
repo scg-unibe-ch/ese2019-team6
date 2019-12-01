@@ -1,43 +1,46 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title text-center>Log In</ion-title>
     <ion-menu-button class="end1" slot="end"></ion-menu-button>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button class="backbtn"></ion-back-button>
     </ion-buttons>
+    <ul class="imgtop"><img src="../../assets/eventify6.png" class="img2">
+    </ul>
   </ion-toolbar>
 </ion-header>
 
 <ion-content no-padding>
+  <h1 class="hdr"><strong>Login</strong></h1>
+  <ion-text>
+    <h2 class="smallhdr">Continue planning your event!</h2>
+  </ion-text>
+
   <div class="main">
     <ion-card no-margin>
       <ion-card-content>
-  <ion-row class="row">
-    <div class="div-logo">
-      <img src="../../assets/logo_eventify.png" class="img-logo" alt="logo">
-      <ion-text>
-        <h2 no-margin margin-vertical text-center>Continue planning your event</h2>
-      </ion-text>
-    </div>
-  </ion-row>
-    <ion-col>
-      <ion-row>
-      <ion-input placeholder="Email" [(ngModel)]="email" class="input"></ion-input>
-      </ion-row>
-    </ion-col>
-    <ion-col>
-      <ion-row>
-      <ion-input clearInput placeholder="Password" [(ngModel)]="password" type="password" class="input" padding-horizontal clear-input="true"></ion-input>
-      </ion-row>
-    </ion-col>
 
-    <ion-button expand="block" (click)="login()" color="undefined" class="transition">Login</ion-button>
-        <!-- /** to be changed <ion-item routerLink="/requestlogin" style="text-align: center; margin-top: 10px; --min-height: 0.5rem"></ion-item>
         <ion-row>
-          <ion-col>
-            <ion-text class="error" text-center>{{error}}</ion-text>
-          </ion-col>
-        </ion-row>*/  -->
+    <ion-col>
+
+  <ion-input  placeholder="Email" [(ngModel)]="email" class="input"></ion-input>
+    </ion-col>
+        </ion-row>
+
+        <ion-col>
+          <ion-row>
+            <ion-input clearInput placeholder="Password" [(ngModel)]="password" type="password" class="input" padding-horizontal clear-input="true"></ion-input>
+          </ion-row>
+        </ion-col>
+
+
+        <ion-button expand="block" (click)="login()" color="undefined" class="transition">
+          <strong class="white">Login</strong></ion-button>
+
+
+
+
+
+<br><br>
       <ion-row>
       <ion-label style="width: 100%; text-align: center; font-size: 11px">Trouble to log in?</ion-label>
       </ion-row>
@@ -49,4 +52,45 @@
     </ion-card-content>
     </ion-card>
   </div>
+
+
+  <br>
+  <div class="container body-content">
+
+    <ion-item>
+
+      <div class="lastpart">
+        <img src="../../assets/eventify6.png" class="img2">
+
+
+        <br>
+
+
+        <button ion-button icon-only class="i">
+
+          <ion-icon name="logo-facebook" size="large"></ion-icon>
+        </button>
+
+        <button ion-button icon-only class="i1">
+          <ion-icon name="logo-twitter" size="large"></ion-icon>
+        </button>
+
+        <button ion-button icon-only class="i2">
+          <ion-icon name="logo-linkedin" size="large"></ion-icon>
+        </button>
+
+        <button ion-button icon-only class="i3">
+          <ion-icon name="logo-instagram" size="large"></ion-icon>
+        </button>
+
+      </div>
+
+    </ion-item>
+
+
+
+  </div>
+  <ul class="brand">&copy; EVENTIFY, 2019</ul>
+
+
 </ion-content>

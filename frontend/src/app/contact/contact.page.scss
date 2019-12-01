@@ -65,7 +65,7 @@ ion-card {
   padding-bottom: 30px;
 }
 .transition {
-  background: linear-gradient(to right, #33BAFF 14%, #4357F0 96%);
+  background: linear-gradient(to right, #a2f78d 4%, #5af158 10%, limegreen 93%, #12c700 3%);
 }
 .imp-button {
   background:#ff3300;
@@ -84,19 +84,148 @@ ion-card {
   margin-right: 10%;
   font-size: 9px;
 }
-.lastpart{
-  background-color: midnightblue;
-  color: white;
-  font-size: 10px;
-  text-indent: 15px;
-  text-decoration: solid;
-  text-align: justify;
-  text-transform: uppercase;
+
+.hdr{
+  color: gray !important;
+  text-align: center;
 }
+.smallhdr{
+
+  color: gray !important;
+  text-align: center;
+  font-size: small;
+
+
+}
+
 .end1{
-  background: dodgerblue !important;
+  background: limegreen !important;
+  filter: brightness(95%);
   color:white;
   border: 0.8px solid rgb(1000, 1000, 1000);
   border-radius: 10px;
   display: block;
+
+}
+
+.imgtop{
+  background-color: limegreen;
+  filter: brightness(95%);
+  color: white;
+  font-size: 10px;
+  width: 350px;
+  height: 50px;
+
+}
+.img2{
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 1px;
+}
+
+.i{
+  background-color: limegreen;
+  border-radius: 10px;
+  border: solid;
+  border-color: white;
+  border-width: 0.2px;
+  color: white;
+
+}
+
+.i:hover{
+  background-color: white;
+  color: gray;
+  transition-delay: 0.1s;
+}
+
+
+.i1{
+  background-color: limegreen;
+  border-radius: 10px;
+  border: solid;
+  border-color: white;
+  border-width: 0.2px;
+  color: white;
+}
+
+
+.i1:hover{
+  background-color: white;
+  color: gray;
+  transition-delay: 0.1s;
+}
+
+.i2{
+  background-color: limegreen;
+  border-radius: 10px;
+  border: solid;
+  border-color: white;
+  border-width: 0.2px;
+  color: white;
+}
+
+
+.i2:hover{
+  background-color: white;
+  color: gray;
+  transition-delay: 0.1s;
+}
+
+.i3{
+  background-color: limegreen;
+  border-radius: 10px;
+  border: solid;
+  border-color: white;
+  border-width: 0.2px;
+  color: white;
+}
+
+.i3:hover{
+  background-color: white;
+  color: gray;
+  transition-delay: 0.1s;
+}
+
+
+
+.lastpart{
+  background-color: limegreen;
+  filter: brightness(95%);
+  color: white;
+  font-size: 10px;
+  text-indent: 15px;
+
+  text-decoration: solid;
+  text-align: justify;
+  text-transform: uppercase;
+  height: 100px;
+  width: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 25px;
+
+}
+.brand{
+  color: gray;
+  font-size: 0.3em !important;
+  padding: 0.5px;
+  padding-left: 27px;
+}
+
+.backbtn{
+  background-color: limegreen;
+  color: white !important;
+  filter: brightness(95%);
+  font-size: 15px;
+  height: 50px;
+  width: 50px;
+  padding-top: 3px;
+}
+
+.msgtxt{
+  width: 550px;
+  height: 150px;
+  padding: 5px;
+  border: 1px solid gray !important;
 }

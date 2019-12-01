@@ -1,16 +1,4 @@
 
-.button6{
-  width: 120px;
-  height: 50px;
-  border: 0.8px solid rgb(1000, 1000, 1000);
-  border-radius: 10px;
-  font-size: 0.9em !important;
-  display: block;
-  color: white;
-  background: coral !important;
-  padding: 10px;
-  float: right;
-}
 
 .i{
   background-color: limegreen;
@@ -18,7 +6,7 @@
   border: solid;
   border-color: white;
   border-width: 0.2px;
-  color: #3b5998;
+  color: white;
 
 }
 
@@ -35,7 +23,7 @@
   border: solid;
   border-color: white;
   border-width: 0.2px;
-  color: #38A1F3;
+  color: white;
 }
 
 
@@ -51,7 +39,7 @@
   border: solid;
   border-color: white;
   border-width: 0.2px;
-  color: #2867B2;
+  color: white;
 }
 
 
@@ -67,7 +55,7 @@
   border: solid;
   border-color: white;
   border-width: 0.2px;
-  color: #C13584;
+  color: white;
 }
 
 .i3:hover{
@@ -88,6 +76,11 @@
   text-decoration: solid;
   text-align: justify;
   text-transform: uppercase;
+height: 100px;
+  width: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 25px;
 
 }
 
@@ -98,10 +91,11 @@
   filter: brightness(95%);
   color: white;
   font-size: 10px;
-  text-indent: 15px;
   width: 400px;
   height: 50px;
   padding: 0.5px;
+  text-indent: 5px;
+
 }
 
 
@@ -218,12 +212,10 @@
 }
 
 
-
-
-
 .img2{
-  height: 50px;
+  height: 40px;
   padding-top: 10px;
+  padding-left: 80px;
 }
 
 
@@ -272,4 +264,5 @@
   color: gray;
   font-size: 0.3em !important;
   padding: 0.5px;
+  padding-left: 27px;
 }
