@@ -1,38 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {Router} from '@angular/router';
-import {ToastController} from '@ionic/angular';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ContactDBService } from '../database/contact-db.service';
+import { ContactModel } from '../models/contact.model';
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.page.html',
   styleUrls: ['./contact.page.scss'],
 })
-export class ContactPage implements OnInit {
-  ngOnInit() {
-  }
 
-  email = '';
-  name = '';
-  error = '';
+export class ContactPage implements OnInit {
+  form: FormGroup;
 
   constructor(
-    private fireauth: AngularFireAuth,
-    private router: Router,
-    private toastController: ToastController,
-  ) {
+    private formBuilder: FormBuilder,
+    private contactDB: ContactDBService
+  ) { }
+
+  ngOnInit() {
+    this.form = this.formBuilder.group({
+      name:['', Validators.required],
+      email:['', [Validators.required, Validators.email]],
+      message:['', Validators.required]
+    });
   }
 
-  recover() {
-    this.fireauth.auth.sendPasswordResetEmail(this.email)
-      .then(data => {
-        console.log(data);
-        //this.presentToast('Password reset email sent', true, 'bottom', 3000);
-        this.router.navigateByUrl('/login');
-      })
-      .catch(err => {
-        console.log(` failed ${err}`);
-        this.error = err.message;
-      });
+  submitMessage() {
+    const message: ContactModel = {
+      name: this.form.controls['name'].value,
+      email: this.form.controls['email'].value,
+      message: this.form.controls['message'].value
+    };
+    this.contactDB.addMessage(message);
   }
 }

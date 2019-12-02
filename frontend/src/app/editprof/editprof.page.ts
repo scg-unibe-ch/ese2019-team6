@@ -1,25 +1,28 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-editprof',
   templateUrl: 'editprof.page.html',
   styleUrls: ['editprof.page.scss'],
 })
+
 export class EditprofPage {
   user: any;
   email: string = '';
   password: string = '';
   username: string = '';
   image: number;
-  phone: number;
   error: string;
-  userWantsToSignup: boolean = false;
   linkError: string = '';
-  constructor(private toastController: ToastController, public loadingController: LoadingController, private fireauth: AngularFireAuth, private router: Router) { }
 
+  constructor(
+    private toastController: ToastController,
+    private fireauth: AngularFireAuth,
+    private router: Router
+  ) { }
 
   ionViewDidEnter() {
     this.fireauth.auth.onAuthStateChanged((user) => {
@@ -60,7 +63,6 @@ export class EditprofPage {
   }
 
   updateImage() {
-
     this.user.updateProfile({
       photoURL: `https://picsum.photos/id/${this.image}/200/200`
     })
@@ -91,7 +93,7 @@ export class EditprofPage {
 
   logout() {
     this.fireauth.auth.signOut().then(() => {
-      this.router.navigate(['/login']);
+      this.router.navigate(['/home']);
     })
   }
 

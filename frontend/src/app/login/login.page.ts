@@ -14,17 +14,18 @@ export class LoginPage {
   email = '';
   password = '';
   error = '';
-  constructor(private fireauth: AngularFireAuth,
-              private router: Router,
-              private toastController: ToastController,
-              public alertController: AlertController) {
 
-  }
+  constructor(
+    private fireauth: AngularFireAuth,
+    private router: Router,
+    private toastController: ToastController,
+    public alertController: AlertController
+  ) { }
+
   login() {
     this.fireauth.auth.signInWithEmailAndPassword(this.email, this.password)
       .then(res => {
         if (res.user) {
-          console.log(res.user);
           this.presentToast('Welcome back to eventify', true, 'bottom', 3000);
           this.router.navigate(['/home']);
         }
@@ -45,13 +46,3 @@ export class LoginPage {
     await toast.present();
   }
 }
-
-
-
-/**export class LoginPage implements OnInit {
- * constructor() {
- *
- * }ngOnInit() {
- *
- * }
- */

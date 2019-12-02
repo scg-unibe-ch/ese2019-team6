@@ -7,13 +7,17 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ServiceDBService {
   private serviceCollection: AngularFirestoreCollection<ServiceModel>;
-  private services: Observable<ServiceModel[]>;
 
   constructor(db: AngularFirestore) {
     this.serviceCollection = db.collection<ServiceModel>('services');
-    this.services = this.serviceCollection.snapshotChanges().pipe(
+    this.getData();
+  }
+
+  getData(): Observable<ServiceModel[]> {
+    return this.serviceCollection.snapshotChanges().pipe(
       map(actions => {
         return actions.map(a => {
           const data = a.payload.doc.data();
@@ -24,11 +28,19 @@ export class ServiceDBService {
     );
   }
 
-  getServices() {
-    return this.services;
+  getService(id: string) {
+    return this.serviceCollection.doc<ServiceModel>(id).valueChanges();
   }
 
-  getService(id) {
-    return this.serviceCollection.doc<ServiceModel>(id).valueChanges();
+  addService(service: ServiceModel) {
+    this.serviceCollection.add(service);
+  }
+
+  updateService(id: string, service: ServiceModel) {
+    this.serviceCollection.doc(id).update(service);
+  }
+
+  deleteService(id: string) {
+    this.serviceCollection.doc(id).delete();
   }
 }

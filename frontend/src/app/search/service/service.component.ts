@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ServiceModel } from '../../models/service.model';
 
 @Component({
@@ -6,11 +6,11 @@ import { ServiceModel } from '../../models/service.model';
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.scss'],
 })
+
 export class ServiceComponent implements OnInit {
   @Input() service: ServiceModel;
 
   constructor() { }
 
   ngOnInit() {}
-
 }

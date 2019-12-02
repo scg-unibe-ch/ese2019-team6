@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Platform, AlertController } from '@ionic/angular';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { UserDBService } from '../database/user-db.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
   styleUrls: ['./signup.page.scss'],
 })
+
 export class SignupPage implements OnInit {
   email = '';
   password = '';
@@ -20,15 +21,17 @@ export class SignupPage implements OnInit {
     private fireauth: AngularFireAuth,
     private router: Router,
     private toastController: ToastController,
-    private platform: Platform,
-    public loadingController: LoadingController,
-    public alertController: AlertController) {
-  }
+    private userDB: UserDBService
+  ) { }
+
+  ngOnInit() {}
+
   signup() {
     this.fireauth.auth.createUserWithEmailAndPassword(this.email, this.password)
       .then(res => {
         if (res.user) {
           console.log(res.user);
+          this.userDB.createUser(this.fireauth.auth.currentUser.uid, {id: this.fireauth.auth.currentUser.uid, services: ["gagi"]});
           this.updateProfile();
         }
       })
@@ -61,7 +64,5 @@ export class SignupPage implements OnInit {
       duration
     });
     await toast.present();
-  }
-  ngOnInit() {
   }
 }

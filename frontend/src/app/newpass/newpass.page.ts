@@ -8,18 +8,17 @@ import { AngularFireAuth } from '@angular/fire/auth';
   templateUrl: './newpass.page.html',
   styleUrls: ['./newpass.page.scss'],
 })
+
 export class NewpassPage {
   email = '';
-  password = '';
   error = '';
   image: number;
+
   constructor(
     private fireauth: AngularFireAuth,
     private router: Router,
     private toastController: ToastController,
-    ) {
-
-  }
+    ) { }
 
   recover() {
     this.fireauth.auth.sendPasswordResetEmail(this.email)
@@ -43,5 +42,4 @@ export class NewpassPage {
     });
     await toast.present();
   }
-
 }

@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './services.page.html',
   styleUrls: ['./services.page.scss'],
 })
+
 export class ServicesPage implements OnInit {
   private service: ServiceModel = {
     name: '',

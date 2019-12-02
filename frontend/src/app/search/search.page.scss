@@ -14,8 +14,7 @@ app-service:hover {
   cursor: pointer;
 }
 
-
-.end1{
+.end1 {
   background: limegreen !important;
   filter: brightness(95%);
   color:white;
@@ -24,7 +23,8 @@ app-service:hover {
   display: block;
 }
 
-.imgtop{
+.imgtop {
+  margin-left: -4px;
   background-color: limegreen;
   filter: brightness(95%);
   color: white;
@@ -33,87 +33,72 @@ app-service:hover {
   width: 400px;
   height: 50px;
   padding: 0.5px;
-
 }
-.img2{
+
+.img2 {
   height: 40px;
   padding-top: 10px;
   padding-left: 80px;
 }
 
-.i{
+.i {
   background-color: limegreen;
   border-radius: 10px;
-  border: solid;
-  border-color: white;
-  border-width: 0.2px;
+  border: 0.2px solid white;
   color: white;
-
 }
 
-.i:hover{
+.i:hover {
   background-color: white;
   color: gray;
   transition-delay: 0.1s;
 }
 
-
-.i1{
+.i1 {
   background-color: limegreen;
   border-radius: 10px;
-  border: solid;
-  border-color: white;
-  border-width: 0.2px;
+  border: 0.2px solid white;
   color: white;
 }
 
-
-.i1:hover{
+.i1:hover {
   background-color: white;
   color: gray;
   transition-delay: 0.1s;
 }
 
-.i2{
+.i2 {
   background-color: limegreen;
   border-radius: 10px;
-  border: solid;
-  border-color: white;
-  border-width: 0.2px;
+  border: 0.2px solid white;
   color: white;
 }
 
-
-.i2:hover{
+.i2:hover {
   background-color: white;
   color: gray;
   transition-delay: 0.1s;
 }
 
-.i3{
+.i3 {
   background-color: limegreen;
   border-radius: 10px;
-  border: solid;
-  border-color: white;
-  border-width: 0.2px;
+  border: 0.2px solid white;
   color: white;
 }
 
-.i3:hover{
+.i3:hover {
   background-color: white;
   color: gray;
   transition-delay: 0.1s;
 }
 
-
-
-.lastpart{
+.lastpart {
   background-color: limegreen;
   filter: brightness(95%);
   color: white;
   font-size: 10px;
   text-indent: 15px;
-
   text-decoration: solid;
   text-align: justify;
   text-transform: uppercase;
@@ -122,11 +107,10 @@ app-service:hover {
   margin-left: 10px;
   margin-right: 10px;
   padding-left: 25px;
-
 }
-.brand{
+
+.brand {
   color: gray;
   font-size: 0.3em !important;
-  padding: 0.5px;
-  padding-left: 27px;
+  padding: 0.5px 0.5px 0.5px 27px;
 }

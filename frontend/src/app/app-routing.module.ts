@@ -7,11 +7,12 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'signup', loadChildren: './signup/signup.module#SignUpPageModule' },
   { path: 'search', loadChildren: './search/search.module#SearchPageModule' },
+  { path: 'search/services/:id', redirectTo: 'services/:id', pathMatch: 'full'},
   { path: 'newpass', loadChildren: './newpass/newpass.module#NewpassPageModule' },
   { path: 'editprof', loadChildren: './editprof/editprof.module#EditprofPageModule' },
   { path: 'services', redirectTo: 'search', pathMatch: 'full' },
   { path: 'services/:id', loadChildren: './services/services.module#ServicesPageModule' },
-  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
+  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' }
 
 ];
 
