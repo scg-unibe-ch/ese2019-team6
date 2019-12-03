@@ -12,7 +12,8 @@ const routes: Routes = [
   { path: 'editprof', loadChildren: './editprof/editprof.module#EditprofPageModule' },
   { path: 'services', redirectTo: 'search', pathMatch: 'full' },
   { path: 'services/:id', loadChildren: './services/services.module#ServicesPageModule' },
-  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' }
+  { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
+  { path: 'editprof2', loadChildren: './editprof2/editprof2.module#Editprof2PageModule' }
 
 ];
 

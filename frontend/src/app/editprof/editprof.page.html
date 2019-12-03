@@ -1,83 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title text-center>Edit Profile</ion-title>
     <ion-menu-button class="end1" slot="end"></ion-menu-button>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button class="backbtn"></ion-back-button>
     </ion-buttons>
+    <ul class="imgtop"><img src="../../assets/eventify6.png" class="img2">
+    </ul>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    <p>Here are your profile details</p>
-    <ion-item *ngIf="user">
-      <ion-thumbnail slot="start">
-        <img [src]="user.photoURL" alt="Profile Picture">
-      </ion-thumbnail>
-      <ion-label text-wrap>
-        <ion-text color="primary">
-          <h3>{{user.displayName}}</h3>
-        </ion-text>
-        <p>{{user.email}}</p>
+  <ion-item *ngIf="user">
+
+    <ul>Here are your profile details</ul>
+
+
+        <img [src]="user.photoURL" class="profilephoto">
+
+
+      <ion-label>
+
+<br>
+
+        <div class="username">
+        <ion-item>
+          <ion-label >Username: </ion-label>
+          <ion-input placeholder="{{user.displayName}}" ></ion-input>
+
+        </ion-item>
+        </div>
+        <br>
+
+          <ion-item>
+            <ion-label >email: </ion-label>
+            <ion-input placeholder="{{user.email}}" ></ion-input>
+
+          </ion-item>
+
+
       </ion-label>
-    </ion-item>
-  </div>
-  <ion-list-header color="primary">
-    Profile Update
-  </ion-list-header>
-  <ion-item>
-    <ion-label position="fixed">Username</ion-label>
-    <ion-input type="string" placeholder="Enter new" [(ngModel)]="username"></ion-input>
-    <ion-button slot="end" class="transition" expand="full" (click)="updateUsername()">Update</ion-button>
   </ion-item>
-  <ion-item>
-    <ion-label position="fixed">Image</ion-label>
-    <ion-input type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
-    <ion-button slot="end" class="transition" expand="full" (click)="updateImage()">Update</ion-button>
-  </ion-item>
-  <ion-list-header color="primary">
-    Account Details Updates
-  </ion-list-header>
-  <ion-item>
-    <ion-label position="fixed">Email</ion-label>
-    <ion-input type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
-    <ion-button slot="end" class="transition" expand="full" (click)="updateEmail()">Update</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-label position="fixed">Password</ion-label>
-    <ion-input type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
-    <ion-button slot="end" class="transition" expand="full" (click)="updatePassword()">Update</ion-button>
-  </ion-item>
+
+
+
   <ion-row>
     <ion-col>
-      <ion-text class="error" text-center>{{error}}</ion-text>
+      <ion-button expand="block" (click)="editprofile()" color="undefined" class="transition">
+        <strong class="white">Edit Profile</strong></ion-button>
     </ion-col>
   </ion-row>
-  <!--
-  <ion-row>
-    <ion-col>
-      <ion-button *ngIf="userWantsToSignup" expand="block" (click)="signup()" color="undefined" class="transition">
-        <strong class="white">
-          Sign Up</strong></ion-button>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button *ngIf="!userWantsToSignup" expand="block" (click)="wantsToSignup()" color="undefined"
-        class="transition"><strong class="white">I want to
-          Sign Up</strong></ion-button>
-    </ion-col>
-  </ion-row> -->
-  <ion-row>
-    <ion-col>
-      <ion-text class="error" text-center>{{linkError}}</ion-text>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-button expand="block" (click)="logout()" color="undefined" class="transition">
-        <strong class="white">Log Out</strong></ion-button>
-    </ion-col>
-  </ion-row>
+
 </ion-content>

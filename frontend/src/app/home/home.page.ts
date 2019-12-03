@@ -22,3 +22,4 @@ export class HomePage implements OnInit {
       this.navCtrl.navigateRoot('search?q=' + this.search);
   }
 }
+
