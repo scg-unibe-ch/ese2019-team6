@@ -43,8 +43,6 @@
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
 
 
-
-
     <ion-button  slot="end" class="up1"  color="undefined" expand="full" (click)="updateEmail()">Update</ion-button>
   </ion-item>
   <ion-item>
@@ -60,7 +58,6 @@
       <ion-text class="error" text-center>{{error}}</ion-text>
     </ion-col>
   </ion-row>
-
 
 
   <ion-row>
@@ -80,14 +77,10 @@
   <h2 class="or">Or</h2>
 
 
-
   <ion-row>
     <ion-col>
       <ion-button expand="block" (click)="logout()" color="undefined" class="transition">
         <strong class="white">Log Out</strong></ion-button>
     </ion-col>
   </ion-row>
-
-
-
 </ion-content>
