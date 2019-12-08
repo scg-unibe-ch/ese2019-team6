@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
             url: 'search'
           },
           {
-            name: 'Edit Profile',
+            name: 'Profile',
             url: 'editprof'
           },
           {

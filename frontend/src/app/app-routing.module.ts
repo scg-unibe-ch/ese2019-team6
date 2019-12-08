@@ -13,7 +13,8 @@ const routes: Routes = [
   { path: 'services', redirectTo: 'search', pathMatch: 'full' },
   { path: 'services/:id', loadChildren: './services/services.module#ServicesPageModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
-  { path: 'editprof2', loadChildren: './editprof2/editprof2.module#Editprof2PageModule' }
+  { path: 'editprof2', loadChildren: './editprof2/editprof2.module#Editprof2PageModule' },
+  { path: 'addservice', loadChildren: './addservice/addservice.module#AddservicePageModule' }
 
 ];
 

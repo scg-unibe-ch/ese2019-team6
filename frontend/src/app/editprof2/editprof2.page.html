@@ -16,16 +16,16 @@
   </ion-list-header>
   <br>
   <ion-item>
-    <ion-label position="fixed">Username</ion-label>
-    <ion-input  type="string" placeholder="Enter new" [(ngModel)]="username"></ion-input>
-    <ion-button class="up1" slot="end"  expand="full" (click)="updateUsername()">Update</ion-button>
+    <ion-label class="usr" position="fixed">Username</ion-label>
+    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="username"></ion-input>
+    <ion-button class="up1" color="undefined" slot="end"  expand="full" (click)="updateUsername()">Update</ion-button>
   </ion-item>
 
   <ion-item>
 
-    <ion-label position="fixed">Image</ion-label>
-    <ion-input type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
-    <ion-button slot="end" class="up1" expand="full" (click)="updateImage()">Update</ion-button>
+    <ion-label class="usr" position="fixed">Image</ion-label>
+    <ion-input class="inp" type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
+    <ion-button slot="end" class="up1" color="undefined" expand="full" (click)="updateImage()">Update</ion-button>
   </ion-item>
 
   <br>
@@ -39,21 +39,21 @@
   </ion-list-header>
   <br>
   <ion-item>
-    <ion-label position="fixed">Email</ion-label>
-    <ion-input type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
+    <ion-label class="usr"  position="fixed">Email</ion-label>
+    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
 
 
 
 
-    <ion-button  slot="end" class="up1" expand="full" (click)="updateEmail()">Update</ion-button>
+    <ion-button  slot="end" class="up1"  color="undefined" expand="full" (click)="updateEmail()">Update</ion-button>
   </ion-item>
   <ion-item>
-    <ion-label position="fixed">Password</ion-label>
-    <ion-input type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
+    <ion-label class="usr"  position="fixed">Password</ion-label>
+    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
 
 
 
-    <ion-button slot="end" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
+    <ion-button slot="end"  color="undefined" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
   </ion-item>
   <ion-row>
     <ion-col>
@@ -68,9 +68,16 @@
       <ion-text class="error" text-center>{{linkError}}</ion-text>
     </ion-col>
   </ion-row>
+
+
+
   <ion-row>
     <ion-col>
-      <ion-button class="transition" expand="block" (click)="logout()" ><strong class="white">Log Out</strong></ion-button>
+      <ion-button expand="block" (click)="logout()" color="undefined" class="transition">
+        <strong class="white">Log Out</strong></ion-button>
     </ion-col>
   </ion-row>
+
+
+
 </ion-content>

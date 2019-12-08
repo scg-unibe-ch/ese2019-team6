@@ -1,8 +1,7 @@
 .transition {
-  .transition {
-    background: linear-gradient(to right, #a2f78d 4%, #5af158 10%, limegreen 93%, #12c700 3%);
-  }
+  background: linear-gradient(to right, #a2f78d 4%, #5af158 10%, limegreen 93%, #12c700 3%);
 }
+
 
 .main {
   height: 100%;
@@ -56,4 +55,17 @@
 .up1{
   background-color: darkred !important;
   color: white !important;
+}
+.profilephoto{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.inp{
+  font-size: 11px;
+
+}
+
+.usr{
+  font-size: 15px;
+
 }

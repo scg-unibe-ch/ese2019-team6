@@ -10,6 +10,9 @@
 </ion-header>
 
 <ion-content>
+
+  <!--
+
   <ion-item *ngIf="user">
 
     <ul>Here are your profile details</ul>
@@ -20,33 +23,60 @@
 
       <ion-label>
 
-<br>
+<br><br><br><br><br>
 
         <div class="username">
-        <ion-item>
           <ion-label >Username: </ion-label>
           <ion-input placeholder="{{user.displayName}}" ></ion-input>
-
-        </ion-item>
         </div>
-        <br>
 
-          <ion-item>
+        <br>
+        <div class="email">
             <ion-label >email: </ion-label>
             <ion-input placeholder="{{user.email}}" ></ion-input>
-
-          </ion-item>
+        </div>
 
 
       </ion-label>
   </ion-item>
+-->
 
+  <ion-card *ngIf="user">
+    <ion-card-header>
+      <img [src]="user.photoURL"  width="70" height="190">
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-card-title class="pp"><strong>Profile Information</strong></ion-card-title>
+      <br>
+
+
+      <ion-item>
+        <ion-label class="pp1">Username: </ion-label>
+      </ion-item>
+
+      <!--placeholder="{{user.displayName}}" -->
+      <!--placeholder="{{user.email}}" -->
+
+      <ion-item>
+        <ion-label class="pp1">E-Mail: </ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
 
 
   <ion-row>
     <ion-col>
       <ion-button expand="block" (click)="editprofile()" color="undefined" class="transition">
         <strong class="white">Edit Profile</strong></ion-button>
+    </ion-col>
+  </ion-row>
+  <h2 class="or">Or</h2>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="addservice()" color="undefined" class="transition">
+        <strong class="white">Add a Service</strong></ion-button>
     </ion-col>
   </ion-row>
 

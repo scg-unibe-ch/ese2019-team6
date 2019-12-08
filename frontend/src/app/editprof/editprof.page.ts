@@ -100,6 +100,10 @@ export class EditprofPage {
       this.router.navigate(['/editprof2']);
   }
 
+  addservice() {
+    this.router.navigate(['/addservice']);
+  }
+
   async presentToast(message, show_button, position, duration) {
     const toast = await this.toastController.create({
       message: message,
