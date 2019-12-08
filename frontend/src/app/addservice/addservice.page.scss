@@ -41,8 +41,39 @@
   font-size: medium;
   text-align: center;
 }
+
 .pp1{
   color: black !important;
   font-size: small;
   padding: 0.1px;
+}
+
+.up1{
+  background: linear-gradient(to right, #ffaf7a 4%, #ff781f 93%, #ff8b3d 10%, #ff6600 3%);
+  color: white !important;
+}
+
+.list1{
+  background-color: no;
+  font-size: 10px;
+margin-top: 30px;
+}
+
+.shape1{
+  background-color: #5af158 !important;
+  border-radius: 50px;
+  padding: 10px;
+}
+
+.s1{
+  background: none;
+padding: 12px;
+}
+
+.r1{
+  font-size: 13px;
+}
+.profilephoto{
+  width: 250px;
+  height: 200px;
 }

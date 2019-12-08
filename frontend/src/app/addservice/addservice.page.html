@@ -10,33 +10,65 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="user">
 
+  <ion-card *ngIf="user">
 
     <ion-card-content>
 
-      <ion-card-title class="pp"><strong>Your Services</strong></ion-card-title>
-      <br>
+      <ion-card-title class="pp"><strong></strong></ion-card-title>
 
+      <ion-item *ngIf="user">
+
+        <img [src]="user.photoURL" class="profilephoto">
+      </ion-item>
+      <br><br>
+
+        <ion-item>
+        <ion-label class="pp1">Service Name: </ion-label>
+      </ion-item>
 
       <ion-item>
-        <ion-label class="pp1">Service Name: </ion-label>
+        <ion-label class="pp1">About: </ion-label>
       </ion-item>
 
       <!--placeholder="{{user.displayName}}" -->
       <!--placeholder="{{user.email}}" -->
 
       <ion-item>
+        <ion-label class="pp1">Phone: </ion-label>
+      </ion-item>
+
+      <ion-item>
         <ion-label class="pp1">E-Mail: </ion-label>
       </ion-item>
 
       <ion-item>
-        <ion-label class="pp1">Phone No: </ion-label>
+        <ion-label class="pp1">Cost: </ion-label>
       </ion-item>
+
+      <ion-item>
+        <ion-label class="pp1">Location: </ion-label>
+      </ion-item>
+<br>
+      <ion-fab class="position">
+        <ion-buttons class="shape1" shape="round"> DETAILS</ion-buttons>
+        <ion-fab-list class="list1">
+<div class="s1">
+          <ion-item class="r1">Language: </ion-item>
+          <ion-item class="r1">Examples of his/her Work: </ion-item>
+          <ion-item class="r1">Skills: </ion-item>
+          <ion-item class="r1">Payment: </ion-item>
+          <ion-item class="r1">Working Since: </ion-item>
+</div>
+        </ion-fab-list>
+      </ion-fab>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <ion-button class="up1" color="undefined" slot="end"  expand="full" (click)="updateUsername()">Hire Me </ion-button>
 
     </ion-card-content>
   </ion-card>
-
 
   <ion-row>
     <ion-col>
@@ -46,3 +78,6 @@
   </ion-row>
 
 </ion-content>
+
+
+
