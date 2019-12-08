@@ -14,7 +14,8 @@ const routes: Routes = [
   { path: 'services/:id', loadChildren: './services/services.module#ServicesPageModule' },
   { path: 'contact', loadChildren: './contact/contact.module#ContactPageModule' },
   { path: 'editprof2', loadChildren: './editprof2/editprof2.module#Editprof2PageModule' },
-  { path: 'addservice', loadChildren: './addservice/addservice.module#AddservicePageModule' }
+  { path: 'addservice', loadChildren: './addservice/addservice.module#AddservicePageModule' },
+  { path: 'addservice2', loadChildren: './addservice2/addservice2.module#Addservice2PageModule' }
 
 ];
 

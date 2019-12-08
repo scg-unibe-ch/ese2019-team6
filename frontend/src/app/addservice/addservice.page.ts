@@ -96,6 +96,10 @@ export class AddservicePage{
     })
   }
 
+  addservice() {
+    this.router.navigate(['/addservice2']);
+  }
+
   async presentToast(message, show_button, position, duration) {
     const toast = await this.toastController.create({
       message: message,

@@ -4,11 +4,11 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-editprof2',
-  templateUrl: './editprof2.page.html',
-  styleUrls: ['./editprof2.page.scss'],
+  selector: 'app-addservice2',
+  templateUrl: './addservice2.page.html',
+  styleUrls: ['./addservice2.page.scss'],
 })
-export class Editprof2Page{
+export class Addservice2Page{
 
   user: any;
   email: string = '';
@@ -97,10 +97,6 @@ export class Editprof2Page{
     })
   }
 
-  bckhme() {
-      this.router.navigate(['/home']);
-  }
-
   async presentToast(message, show_button, position, duration) {
     const toast = await this.toastController.create({
       message: message,
@@ -111,4 +107,3 @@ export class Editprof2Page{
     toast.present();
   }
 }
-
