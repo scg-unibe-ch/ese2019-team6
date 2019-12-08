@@ -1,0 +1,48 @@
+.transition {
+  background: linear-gradient(to right, #a2f78d 4%, #5af158 10%, limegreen 93%, #12c700 3%);
+}
+
+
+
+.end1 {
+  background: limegreen !important;
+  filter: brightness(95%);
+  color:white;
+  border: 0.8px solid rgb(1000, 1000, 1000);
+  border-radius: 10px;
+  display: block;
+}
+.backbtn {
+  background-color: limegreen;
+  color: white !important;
+  filter: brightness(95%);
+  font-size: 15px;
+  height: 50px;
+  width: 50px;
+  padding-top: 3px;
+}
+.imgtop {
+  background-color: limegreen;
+  filter: brightness(95%);
+  color: white;
+  font-size: 10px;
+  width: 350px;
+  height: 50px;
+}
+
+.img2 {
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+.pp{
+  color: gray !important;
+  font-size: medium;
+  text-align: center;
+}
+.pp1{
+  color: black !important;
+  font-size: small;
+  padding: 0.1px;
+}
