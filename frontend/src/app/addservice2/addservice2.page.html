@@ -12,63 +12,68 @@
 <ion-content>
 
   <ion-list-header class="green1">
-    Service Update
+    New Service Information
   </ion-list-header>
   <br>
 
-
-
-  <ion-item>
-
-    <ion-label class="usr" position="fixed">Logo</ion-label>
-    <ion-input class="inp" type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
-    <ion-button slot="end" class="up1" color="undefined" expand="full" (click)="updateImage()">Update</ion-button>
-  </ion-item>
-  <br>
 
   <ion-item *ngIf="user">
 
     <img [src]="user.photoURL">
   </ion-item>
-  <br><br>
+  <br>
+  <ion-item>
+
+    <ion-label class="usr" position="fixed">Logo</ion-label>
+    <ion-input class="inp" type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
+  </ion-item>
 
 
   <ion-item>
     <ion-label class="usr" position="fixed">Service Name</ion-label>
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="username"></ion-input>
-    <ion-button class="up1" color="undefined" slot="end"  expand="full" (click)="updateUsername()">Update</ion-button>
   </ion-item>
 
 
-  <br>
+  <ion-item>
+    <ion-label class="usr"  position="fixed">About</ion-label>
+      <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label class="usr"  position="fixed">Phone</ion-label>
+    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+
 
   <ion-item>
     <ion-label class="usr"  position="fixed">Email</ion-label>
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
-
-
-
-
-    <ion-button  slot="end" class="up1"  color="undefined" expand="full" (click)="updateEmail()">Update</ion-button>
   </ion-item>
+
+
+
+
   <ion-item>
-    <ion-label class="usr"  position="fixed">About</ion-label>
-    <div class="msgtxt">
+    <ion-label class="usr"  position="fixed">Price</ion-label>
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
-    </div>
-
-
-
-    <ion-button slot="end"  color="undefined" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
   </ion-item>
 
+
+  <ion-item>
+    <ion-label class="usr"  position="fixed">Location</ion-label>
+    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-list-header class="green1">
+   Service Details
+  </ion-list-header>
 
   <ion-item>
     <ion-label class="usr"  position="fixed">Languages</ion-label>
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
-
-
-    <ion-button slot="end"  color="undefined" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
   </ion-item>
 
 
@@ -76,32 +81,26 @@
   <ion-item>
     <ion-label class="usr"  position="fixed">Skills</ion-label>
     <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
-
-
-    <ion-button slot="end"  color="undefined" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
-  </ion-item>
-
-  <ion-item>
-    <ion-label class="usr"  position="fixed">Price</ion-label>
-    <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="password"></ion-input>
-
-
-    <ion-button slot="end"  color="undefined" class="up1" expand="full" (click)="updatePassword()" >Update</ion-button>
   </ion-item>
 
 
-  <ion-row>
-    <ion-col>
-      <ion-text class="error" text-center>{{linkError}}</ion-text>
-    </ion-col>
-  </ion-row>
+
+    <ion-item>
+      <ion-label class="usr"  position="fixed">Payment Method</ion-label>
+      <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label class="usr"  position="fixed">Working Since</ion-label>
+      <ion-input class="inp" type="string" placeholder="Enter new" [(ngModel)]="email"></ion-input>
+    </ion-item>
 
 
   <ion-item>
 
     <ion-label class="usr" position="fixed">Portfolio</ion-label>
     <ion-input class="inp" type="number" placeholder="A number 1-1000" [(ngModel)]="image"></ion-input>
-    <ion-button slot="end" class="up1" color="undefined" expand="full" (click)="updateImage()">Update</ion-button>
   </ion-item>
   <br>
 
@@ -109,27 +108,14 @@
 
     <img [src]="user.photoURL" class="profilephoto">
   </ion-item>
-  <br><br>
-
-
-
-
-
-
-
-
-
+  <br>
 
 
   <ion-row>
     <ion-col>
-      <ion-button expand="block" (click)="logout()" color="undefined" class="transition">
-        <strong class="white">Log Out</strong></ion-button>
+      <ion-button expand="block" color="undefined" class="transition">
+        <strong class="white">Add Service</strong></ion-button>
     </ion-col>
   </ion-row>
-
-
-
-
 
 </ion-content>
