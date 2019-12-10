@@ -91,11 +91,6 @@ export class Editprof2Page{
       });
   }
 
-  logout() {
-    this.fireauth.auth.signOut().then(() => {
-      this.router.navigate(['/home']);
-    })
-  }
 
   bckhme() {
       this.router.navigate(['/home']);
