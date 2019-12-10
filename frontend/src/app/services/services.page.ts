@@ -15,6 +15,7 @@ export class ServicesPage implements OnInit {
     name: '',
     content: [''],
     owner: 0,
+    contact_details: [''],
     editor: []
   };
   private subscription: Subscription;
