@@ -16,36 +16,6 @@
   <ion-card-title class="pp"><strong>Profile Information</strong></ion-card-title>
   <br>
 
-  <!--
-
-  <ion-item *ngIf="user">
-
-    <ul>Here are your profile details</ul>
-
-
-        <img [src]="user.photoURL" class="profilephoto">
-
-
-      <ion-label>
-
-<br><br><br><br><br>
-
-        <div class="username">
-          <ion-label >Username: </ion-label>
-          <ion-input placeholder="{{user.displayName}}" ></ion-input>
-        </div>
-
-        <br>
-        <div class="email">
-            <ion-label >email: </ion-label>
-            <ion-input placeholder="{{user.email}}" ></ion-input>
-        </div>
-
-
-      </ion-label>
-  </ion-item>
--->
-
   <ion-card *ngIf="user">
     <ion-card-header>
       <img [src]="user.photoURL"  width="70" height="190">
@@ -55,9 +25,6 @@
       <ion-item>
         <ion-label class="pp1">Username: </ion-label>
       </ion-item>
-
-      <!--placeholder="{{user.displayName}}" -->
-      <!--placeholder="{{user.email}}" -->
 
       <ion-item>
         <ion-label class="pp1">E-Mail: </ion-label>
